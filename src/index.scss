@@ -1,0 +1,67 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  max-width: 960px;
+}
+
+.header {
+  flex-wrap: nowrap;
+}
+
+.alert-enter, .note-enter {
+  opacity: 0;
+}
+
+.alert-enter-active, .note-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.alert-exit, .note-exit {
+  opacity: 1;
+}
+
+.alert-exit-active, .note-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.notes {
+  width: 960px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.note__item {
+  border: 1px solid #e2e2e2;
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+}
+
+.close:focus {
+  color: #9c9c9c;
+  outline: none;
+}
+
+.note__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+

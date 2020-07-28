@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Input } from './components/Input';
+import { Notes } from './components/Notes';
+import { Alert } from './components/Alert';
+import { AlertState } from './context/alert/AlertState';
+import { FirebaseState } from './context/firebase/FirebaseState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <FirebaseState>
+      <AlertState>
+        <div className="container-lg mx-auto mt-2 wrapper">
+          <Input />
+          <hr />
+          <Alert />
+          <Notes />
+        </div>
+      </AlertState>
+    </FirebaseState>
+  )
 }
 
 export default App;
